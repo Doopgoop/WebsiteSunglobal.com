@@ -320,9 +320,7 @@ body {
   height: 100%;
   object-fit: cover;
   transition: all 0.5s ease;
-
 }
-
 
 /*About us section*/
 .about {
@@ -332,8 +330,7 @@ body {
   color: #38bdf8;
   line-height: 1.5;
   display: grid;
-  
-    
+
   background: linear-gradient(135deg, white;);
 }
 img {
@@ -350,7 +347,6 @@ section.fullscreen {
   background: ;
 }
 blockquote {
-  
   font-size: 1.2rem;
 }
 cite {
@@ -370,16 +366,14 @@ hr {
   display: grid;
   grid-auto-flow: dense;
   grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
-  grid-template-rows: auto; /* Rows adjust to content */
-  padding: 2rem 2rem;
+  grid-template-rows: ; /* Rows adjust to content */
+  padding: 0rem 5rem;
 
   gap: 1em;
 }
 .side-by-side__text {
-  
-  
   margin-trim: block; /* only supported in Firefox 🥺 */
-  
+
   h3 {
     margin-top: 0;
   }
@@ -387,7 +381,7 @@ hr {
 .side-by-side__image {
   display: flex;
   width: 80%;
-  height: 80%;
+  height: 100%;
   justify-content: center;
   align-items: center;
   overflow: ;
@@ -398,10 +392,8 @@ hr {
   height: 100%;
   object-fit: cover;
   border-radius: 12px;
-  padding-left: 3rem;
+  padding: 0rem 1rem 0rem 7rem;
 }
-  
-
 
 .about p,
 .about h2,
@@ -446,65 +438,6 @@ hr {
     opacity: 0;
     translate: 0 8rem;
   }
-}
-
-/* Rolling Banner Improvements */
-
-.rolling-banner {
-  overflow: hidden;
-  background: rgba(0, 113, 206, 0.7);
-  color: var(--light);
-  padding: 2rem 0;
-  white-space: nowrap;
-  position: relative;
-}
-
-.rolling-banner:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100px;
-  height: 100%;
-  background:  rgba(0, 113, 206, 0.7)
-  z-index: 2;
-}
-
-.rolling-banner:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100px;
-  height: 100%;
-  ;
-  z-index: 2;
-}
-
-.rolling-banner-content {
-  display: inline-block;
-  animation: scrollLeft 20s linear infinite;
-  padding-right: 2rem;
-}
-
-.rolling-banner-content span {
-  font-weight: 600;
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-@keyframes scrollLeft {
-  0% {
-    transform: translateX(90%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-.rolling-banner:hover .rolling-banner-content {
-  animation-play-state: paused;
 }
 
 /* Mobile Navigation */
@@ -1013,9 +946,9 @@ hr {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 24px;
-  margin-top: 20px;
+  margin-top: 1px;
   width: 75rem;
-  height: 30rem;
+  height: 35rem;
   min-height: 20rem;
   background-color: white;
   border: 1px solid rgba(0, 0, 0, 0.3);
@@ -1237,19 +1170,22 @@ hr {
   }
 }
 .site-footer {
-  background: linear-gradient(to bottom, #FF4500, #FF6347); /* OrangeRed to Tomato gradient */
+  background: linear-gradient(
+    to bottom,
+    #ff4500,
+    #ff6347
+  ); /* OrangeRed to Tomato gradient */
   color: #fff;
   padding: 50px 20px;
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  box-shadow: 0 -5px 15px rgba(0,0,0,0.3);
-  
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .site-footer h2 {
   font-size: 30px;
   margin-bottom: 20px;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .site-footer p {
@@ -1266,4 +1202,3 @@ hr {
 .site-footer a:hover {
   color: #ffa07a; /* Light Salmon on hover */
 }
-
