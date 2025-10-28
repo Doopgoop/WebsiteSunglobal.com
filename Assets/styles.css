@@ -980,7 +980,7 @@ hr {
 
 /* Services Section */
 .av-products-services {
-  min-height: 100vh;
+  min-height: 90vh;
   background: rgba(0, 113, 206, 0.7);
   padding: 64px 20px;
 }
@@ -1013,9 +1013,9 @@ hr {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 24px;
-  
+  margin-top: 20px;
   width: 75rem;
-  height: 20rem;
+  height: 30rem;
   min-height: 20rem;
   background-color: white;
   border: 1px solid rgba(0, 0, 0, 0.3);
@@ -1236,7 +1236,6 @@ hr {
     padding: 2rem 1.5rem;
   }
 }
-
 .site-footer {
   background: linear-gradient(to bottom, #FF4500, #FF6347); /* OrangeRed to Tomato gradient */
   color: #fff;
@@ -1244,8 +1243,7 @@ hr {
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   box-shadow: 0 -5px 15px rgba(0,0,0,0.3);
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  
 }
 
 .site-footer h2 {
