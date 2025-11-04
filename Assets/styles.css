@@ -996,6 +996,58 @@ hr {
   width: 100%;
   height: 100vh;
 }
+/* --- FIX: OUR PRODUCTS & SERVICES alignment on mobile --- */
+@media (max-width: 900px) {
+  /* Force section to be full width */
+  .av-products-services {
+    display: block !important;
+    width: 100% !important;
+    padding: 2rem 1rem !important;
+  }
+
+  /* Center the blue box properly */
+  .av-ps-header {
+    width: 100% !important;
+    max-width: 600px;
+    margin: 0 auto 2rem auto !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center !important;
+  }
+
+  .av-ps-header h1 {
+    font-size: 1.5rem !important;
+  }
+
+  .av-ps-header p {
+    font-size: 1rem !important;
+    line-height: 1.5;
+  }
+
+  /* Make sure cards below don't float oddly */
+  .av-ps-cards,
+  .av-ps-card {
+    width: 100% !important;
+    margin: 0 auto !important;
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
+  }
+
+  .av-ps-card__figure img {
+    width: 100% !important;
+    max-width: 500px;
+  }
+
+  .av-ps-card__description {
+    width: 100% !important;
+    margin-top: 1rem;
+  }
+}
+
 /* About Section */
 .about {
   padding: 5rem 0;
