@@ -330,7 +330,7 @@ body {
   color: red;
   line-height: 1.5;
   display: grid;
-
+  position: relative;
   background: linear-gradient(135deg, white;);
 }
 img {
