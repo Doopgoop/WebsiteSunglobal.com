@@ -1047,6 +1047,53 @@ hr {
     margin-top: 1rem;
   }
 }
+/* Container: Stack text and images on small screens */
+.why-choose-us .content-wrapper {
+  display: flex;
+  flex-wrap: wrap; /* allow stacking */
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+/* Text content */
+.text-content {
+  flex: 1 1 100%; /* take full width on mobile */
+}
+
+.text-content h2 {
+  font-size: 1.5rem; /* smaller on mobile */
+  margin-bottom: 0.8rem;
+}
+
+.text-content p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.text-content ul {
+  padding-left: 1rem;
+}
+
+.text-content li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* Images: stack vertically */
+.image-frame {
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.image-frame img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
 
 /* About Section */
 .about {
