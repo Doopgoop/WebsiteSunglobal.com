@@ -331,30 +331,35 @@ body {
   line-height: 1.5;
   display: grid;
   position: relative;
-  background: linear-gradient(135deg, white;);
+  background: linear-gradient(135deg, white);
 }
+
 img {
   max-width: 100%;
 }
+
 section {
   grid-column: main;
 }
+
 section.fullscreen {
   grid-column: full;
   height: 100svh;
   display: grid;
   place-content: center;
-  background: ;
 }
+
 blockquote {
   font-size: 1.2rem;
 }
+
 cite {
   display: block;
   font-size: small;
   margin-block: 1rem;
   opacity: 0.6;
 }
+
 hr {
   display: block;
   margin-block: 4rem;
@@ -362,57 +367,115 @@ hr {
   border-width: 1px 0 0;
 }
 
+/* === Side by Side Section === */
 .side-by-side {
   display: grid;
-  grid-auto-flow: dense;
-  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
-  grid-template-rows: ; /* Rows adjust to content */
-  padding: 0rem 5rem;
-
-  gap: 1em;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns for desktop */
+  gap: 2rem;
+  padding: 0 5rem;
+  text-align: center;
 }
-.side-by-side__text {
-  margin-trim: block; /* only supported in Firefox 🥺 */
 
-  h3 {
-    margin-top: 0;
-  }
-}
+/* Image container */
 .side-by-side__image {
   display: flex;
-  width: 80%;
-  height: 100%;
   justify-content: center;
   align-items: center;
-  overflow: ;
+  width: 100%;
 }
 
 .side-by-side__image img {
   width: 100%;
-  height: 100%;
+  height: 70%;
   object-fit: cover;
-  border-radius: 12px;
-  padding: 0rem 1rem 0rem 7rem;
+  border-radius: 30px;
+  padding: 0 1rem;
 }
 
+/* Text styling */
+.side-by-side__text {
+  margin-top: 1rem;
+}
+
+.side-by-side__text h3 {
+  color: #e60000;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.side-by-side__text p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.7;
+  text-align: justify;
+  padding: 0 1rem;
+}
+
+/* === Responsive Fixes === */
+@media (max-width: 1024px) {
+  .side-by-side {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 3rem;
+  }
+}
+
+/* ======= PHONE VIEW (Hide Images) ======= */
+@media (max-width: 768px) {
+  /* Hide images */
+  .side-by-side__image {
+    display: none;
+  }
+
+  /* Single column layout */
+  .side-by-side {
+    grid-template-columns: 1fr;
+    padding: 0 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .side-by-side__text {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .side-by-side__text h3 {
+    font-size: 1.3rem;
+  }
+
+  .side-by-side__text p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    font-size: 1rem;
+    padding: 3rem 0;
+  }
+
+  .side-by-side {
+    gap: 1.5rem;
+  }
+}
+
+/* === Animation Section (kept your effects) === */
 .about p,
 .about h2,
 .about h3,
 .about blockquote,
 .about ul,
 .about hr {
-  /* animation-name: text-appear; @keyframes defined below */
-  /* animation-timing-function: ease-in; standard should be linear */
-  /* animation-fill-mode: both; keeps animated values forwards and backwards */
   animation: text-appear ease-in both;
-  animation-timeline: view(); /* applies animation state relative to viewport */
-  animation-range: 0vh 50vh; /* set 0% and 100% positions */
+  animation-timeline: view();
+  animation-range: 0vh 50vh;
 }
+
 .about img {
   animation: image-appear ease-in both;
   animation-timeline: view();
   animation-range: entry 0vh 55vh;
 }
+
 @prefers-reduced-motion {
   p,
   h2,
@@ -440,6 +503,7 @@ hr {
   }
 }
 
+/* === About Section Styling === */
 .about {
   padding: 5rem 0;
   text-align: center;
@@ -463,6 +527,7 @@ hr {
   line-height: 1.8;
   color: #555;
 }
+
 /* Mobile Navigation */
 .mobile-nav {
   position: fixed;
