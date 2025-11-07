@@ -324,7 +324,7 @@ body {
 
 /*About us section*/
 .about {
-  margin: 0;
+  margin: 10rem auto;
   font-family: system-ui;
   font-size: 1.3rem;
   color: red;
