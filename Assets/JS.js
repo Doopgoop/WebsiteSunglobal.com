@@ -1,5 +1,22 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // ... Your existing mobile menu, header scroll, smooth scroll code ...
+  // ===========================
+  // MOBILE MENU TOGGLE FIX (for .hamburger + .main-nav)
+  // ===========================
+  const menuBtn = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('.main-nav');
+
+  if (menuBtn && navMenu) {
+    menuBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('show'); // toggle visibility
+    });
+
+    // Optional: close menu when link is clicked
+    navMenu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('show');
+      });
+    });
+  }
 
   // ===========================
   // Floating Hero Video Minimize on Scroll
@@ -25,7 +42,6 @@ document.addEventListener('DOMContentLoaded', function () {
     if (cards.length > 0) {
       const lastCardIndex = cards.length - 1;
 
-      // Create ScrollTrigger for the last card
       const lastCardST = ScrollTrigger.create({
         trigger: cards[lastCardIndex],
         start: 'center center',

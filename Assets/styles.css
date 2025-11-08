@@ -35,6 +35,46 @@ body {
   margin: 0 auto;
   padding: 0 1.5rem;
 }
+/* Hide menu on phone view */
+.main-nav {
+  display: none;
+  flex-direction: column;
+  background: white; /* or your navbar bg */
+  position: absolute;
+  top: 70px; /* adjust to below header */
+  right: 20px;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* When menu is open */
+.main-nav.show {
+  display: flex;
+}
+
+/* Hamburger always visible on mobile */
+.hamburger {
+  display: block;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Optional: hide hamburger on desktop */
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+  .main-nav {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    box-shadow: none;
+    background: transparent;
+  }
+}
 
 /* Header Improvements */
 .site-header {
